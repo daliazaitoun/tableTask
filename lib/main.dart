@@ -1,6 +1,11 @@
+import 'package:easy_pos_r5/sql_helper.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  var sqlHelper = SqlHelper();
+
   runApp(const MyApp());
 }
 
@@ -116,7 +121,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          var sqlHelper = SqlHelper();
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
