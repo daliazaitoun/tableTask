@@ -4,11 +4,23 @@ import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
 
 class SqlHelper {
   Database? db;
-  SqlHelper() {
-    _init();
+
+  Future<void> createTables() async {
+    try {
+      await db?.execute("""
+    Create table if not exists customers(
+    id Integer primary key,
+    name String,
+    phone String,
+    address String
+  )
+    """);
+    } catch (e) {
+      print('Error in creating table: $e');
+    }
   }
 
-  void _init() async {
+  Future<void> init() async {
     try {
       if (kIsWeb) {
         var factory = databaseFactoryFfiWeb;
