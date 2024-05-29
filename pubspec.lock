@@ -99,6 +99,22 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  get_it:
+    dependency: "direct main"
+    description:
+      name: get_it
+      sha256: d85128a5dae4ea777324730dc65edd9c9f43155c109d5cc0a69cab74139fbac1
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.7.0"
+  grouped_action_buttons:
+    dependency: "direct main"
+    description:
+      name: grouped_action_buttons
+      sha256: "18e7b9110b1e818d36f153d575fb01254e52b1c2f62d23b12d98ecf6620a3f11"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
   http:
     dependency: transitive
     description:
