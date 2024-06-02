@@ -1,4 +1,5 @@
 import 'package:easy_pos_r5/helpers/sql_helper.dart';
+import 'package:easy_pos_r5/pages/categories.dart';
 import 'package:easy_pos_r5/widgets/grid_view_item.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -100,26 +101,34 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.orange,
                   iconData: Icons.calculate,
                   label: 'All Sales',
+                  onPressed: () {},
                 ),
                 GridViewItem(
                   color: Colors.pink,
                   iconData: Icons.inventory_2,
                   label: 'Products',
+                  onPressed: () {},
                 ),
                 GridViewItem(
                   color: Colors.lightBlue,
                   iconData: Icons.groups,
                   label: 'Clients',
+                  onPressed: () {},
                 ),
                 GridViewItem(
                   color: Colors.green,
                   iconData: Icons.point_of_sale,
                   label: 'New Sale',
+                  onPressed: () {},
                 ),
                 GridViewItem(
                   color: Colors.yellow,
                   iconData: Icons.category,
                   label: 'Categories',
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => CategoriesPage()));
+                  },
                 ),
               ],
             ),

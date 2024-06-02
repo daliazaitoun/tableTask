@@ -9,7 +9,7 @@ void main() async {
   var sqlHelper = SqlHelper();
   await sqlHelper.init();
   if (sqlHelper.db != null) {
-    GetIt.I.registerSingleton<SqlHelper>(sqlHelper);
+    GetIt.I.registerSingleton(sqlHelper);
   }
 
   runApp(const MyApp());
