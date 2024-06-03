@@ -1,5 +1,6 @@
 import 'package:easy_pos_r5/helpers/sql_helper.dart';
 import 'package:easy_pos_r5/pages/categories.dart';
+import 'package:easy_pos_r5/pages/clients.dart';
 import 'package:easy_pos_r5/widgets/grid_view_item.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Expanded(
                 child: Container(
-                  height: MediaQuery.of(context).size.height / 3 +
+                  height: MediaQuery.of(context).size.height / 2.7 +
                       (kIsWeb ? 40 : 0),
                   color: Theme.of(context).primaryColor,
                   child: Padding(
@@ -113,7 +114,10 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.lightBlue,
                   iconData: Icons.groups,
                   label: 'Clients',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => ClientsPage()));
+                  },
                 ),
                 GridViewItem(
                   color: Colors.green,
